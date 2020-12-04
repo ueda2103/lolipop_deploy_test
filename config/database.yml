@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
-  database: lolipop_deploy_test1_production
-  username: lolipop_deploy_test1
-  password: <%= ENV['LOLIPOP_DEPLOY_TEST1_DATABASE_PASSWORD'] %>
+  database: <%= ENV['DB_NAME'] %>
+  username: <%= ENV['DB_USER_NAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
+  host: <%= ENV['DB_HOST'] %>
